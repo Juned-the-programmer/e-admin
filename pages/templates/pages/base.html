@@ -65,11 +65,11 @@
             <li class="nav-item nav-profile dropdown ">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                 <div class="nav-profile-img">
-                  <img src="{% static "{{  }}" %}" alt="image">
+                  <img src="{{ user.profile.image.url }}" alt="image">
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text text-white">
-                  <p class="mb-1 text-white " style="font-weight: bold;">Sajjad Ranasariya</p>
+                  <p class="mb-1 text-white " style="font-weight: bold;">{{user.usernmame}}</p>
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown ml-4" aria-labelledby="profileDropdown">
