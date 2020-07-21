@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static "assets/vendors/mdi/css/materialdesignicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/vendors/css/vendor.bundle.base.css" %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{% static "assets/../../static/css/style.css" %}">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{% static "assets/images/favicon.png" %}" />
+</head>
+<body>
+ <div class="main-panel" style="width: 100%;outline: none;border: none;">
+          <div class="content-wrapper">
+
+
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> Dashboard </h3>
+              <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3 text-black">Total Sales <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5 text-black">$ 15,0000</h2>
+                    <h6 class="card-text text-black">Increased by 20%</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-warning card-img-holder">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3 text-black">Total Profit<i class="mdi mdi-square-inc-cash mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5 text-black">$ 10000</h2>
+                    <h6 class="card-text text-black">Increased by 10%</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-secondary card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3 text-black">Total Users <i class="mdi mdi-account-multiple mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5 text-black"> + 5000</h2>
+                    <h6 class="card-text text-black">60 % Active</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 stretch-card grid-margin">
+                <div class="card bg-gradient-dark card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Total Orders <i class="mdi mdi-bookmark mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-3">+ 10000</h2>
+                    <h6 class="card-text">Increased By 40%</h6>
+                    <div class="row mt-3">
+                    	<div class="col-md-12">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px lightgray);">
+							   <div class="card-body text-center">
+
+							        <p class="card-text text-black font-weight-bold " style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-store text-black mr-4"></i>Confirmed&nbsp;&nbsp; : <span class="ml-3"> 500</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    	<div class="col-md-12 mt-3">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px lightgray);">
+							   <div class="card-body text-center">
+							       <p class="card-text text-black font-weight-bold" style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-truck-delivery text-black mr-4"></i>In Transit&nbsp;&nbsp; : <span class="ml-3"> 400</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    	<div class="col-md-12 mt-3">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px lightgray);">
+							   <div class="card-body text-center">
+							    	<p class="card-text text-black font-weight-bold" style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-check-circle text-black mr-4"></i>Delivered&nbsp;&nbsp; : <span class="ml-3" >   9100</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-6 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder 4dp">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal text-white mb-3">Total Products <i class="mdi mdi-cart mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-3 text-white">+ 3500</h2>
+                    <h6 class="card-text text-white">80% Heavy Brands</h6>
+                    <div class="row mt-2">
+                    	<div class="col-md-12 mt-2">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px gray);">
+							   <div class="card-body text-center">
+							       <p class="card-text text-black font-weight-bold" style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-tag-plus text-black mr-4"></i>New Arrival&nbsp;&nbsp; : <span class="ml-3 "> + 1000</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    	<div class="col-md-12 mt-3">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px gray);">
+							   <div class="card-body text-center">
+							       <p class="card-text text-black font-weight-bold" style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-package-variant text-black mr-4"></i>In Stock&nbsp;&nbsp; : <span class="ml-3"> + 3000</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    	<div class="col-md-12 mt-3">
+                    		<div class="card bg-gradient-secondary" style="width: 100%;filter: drop-shadow(2px 2px 10px #242424);">
+							   <div class="card-body text-center">
+							       <p class="card-text text-black font-weight-bold" style="font-weight: bold;font-size: 25px;"><i class="mdi mdi-close-octagon text-black mr-4"></i>Out of Stock&nbsp;&nbsp; : <span class="ml-3"> + 400</span></p>
+							  </div>
+							</div>
+                    	</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <footer class="footer bg-gradient-secondary">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between font-weight-bold text-center">
+              <span class="text-dark ml-5" style="font-size: large;">Copyright © 2020 Pro Web-Designer. All rights reserved.</span>
+              <span style="text-align: center;font-size: large;" class="float-none float-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            </div>
+          </footer>
+
+      </div>
+
+  </div>
+
+</body>
+

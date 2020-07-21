@@ -1,0 +1,44 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Orders
+{% endblock title %}
+
+{% block content %}
+
+ <table class="table table-hover table-bordered table-responsive" border="1" style="width: 100%;">
+     <thead>
+       <tr class="table table-active text-center">
+         <th class="font-weight-bold" style="width: 8%;">Id</th>
+         <th class="font-weight-bold" style="width: 10%;">Status</th>
+         <th class="font-weight-bold" style="width: 17%;">Custo. Name<i class="mdi mdi mdi-arrow-up float-right"></i><i class="mdi mdi mdi-arrow-down float-right"></i></th>
+         <th class="font-weight-bold" style="width: 17%;">Product<i class="mdi mdi mdi-arrow-up float-right"></i><i class="mdi mdi-arrow-down float-right "></i></th>
+         <th class="font-weight-bold" style="width: 12%;">Date<i class="mdi mdi mdi-arrow-up float-right"></i><i class="mdi mdi-arrow-down float-right "></i></th>
+         <th class="font-weight-bold" style="width: 12%;">Price</th>
+         <th class="font-weight-bold" style="width: 12%;">Update</th>
+         <th class="font-weight-bold" style="width: 12%;">Delete</th>
+          
+       </tr>
+       <tr>
+         <td>1</td>
+         <td><select class="dropdown btn btn-gradient-secondary h5 btn-sm ">
+             <option class="dropdown-item " value="-1" selected>Status</option>
+             <option class="dropdown-item bg-white h5" value="1">Confirmed</option>
+             <option class="dropdown-item bg-white h5" value="2">In Transit</option>
+             <option class="dropdown-item bg-white h5" value="3">Delivered</option>
+         </select></td>
+         <td>name</td>
+         <td>Product</td>
+         <td>1000</td>
+         <td>12/8/2015</td>
+         <td><a href="" style="font-size:17px;" class="btn btn-sm btn-success btn-rounded"><i class="mdi mdi-file-check  mr-2 " style="font-size:17px;"></i>Update</a></td>
+         <td><a href="" style="font-size:17px;" class="btn btn-sm btn-danger btn-rounded"><i class="mdi mdi-delete mr-2 " style="font-size:17px;"></i>Delete</a></td>
+         
+ 
+       </tr>
+     </thead>
+     <tbody>
+       
+     </tbody>
+   </table>
+
+{% endblock content %}
