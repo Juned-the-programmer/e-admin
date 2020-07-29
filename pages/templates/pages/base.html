@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load mptt_tags %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +21,16 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{% static "assets/images/favicon.png" %}" />
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
       .page-body-wrapper .sidebar a
       {
@@ -220,18 +230,43 @@
                   <div class="border-bottom">
                     <p class="menu-title" style="font-size: 18px;color:black;font-weight: bold;">Categories</p>
                   </div>
+
+
                   <ul class="gradient-bullet-list mt-4">
-                    <li class="font-weight-bold"><a href="{% static "products.html" %}"  target="main-panel">Men<i class="mdi mdi-chevron-double-right float-right"></i></a></li>
-                    <li class="font-weight-bold"><a href="{% static "products.html" %}"  target="main-panel">Women<i class="mdi mdi-chevron-double-right float-right"></i></a></li>
-                    <li class="font-weight-bold"><a href="{% static "products.html" %}"  target="main-panel">Children<i class="mdi mdi-chevron-double-right float-right"></i></a></li>
-                    <li class="font-weight-bold"><a href="{% static "products.html" %}"  target="main-panel">Home<i class="mdi mdi-chevron-double-right float-right"></i></a></li>
+
+                  {% comment %} {% recursetree genres %}
+
+                    <li class="font-weight-bold"><a href="#{{node.name}}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">{{node.name}}<i class="mdi mdi-crosshairs-gps float-right"></i></a>
+                        <div class="collapse" id="{{node.name}}">
+                        {% if not node.is_leaf_node %}
+                        {{children}}
+                        {% endif %} 
+                        </div>
+                        
+                      </li>                      
+                      {% endrecursetree %} {% endcomment %}
+                  <ul>
+    {% recursetree genres %}
+        <li>
+        <a href="#{{node.name}}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">{{node.name}}<i class="mdi mdi-crosshairs-gps float-right"></i></a>
+            {% if not node.is_leaf_node %}
+                <ul class="collapse" id="{{node.name}}" >
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul> 
+
                       <span class="nav-link">
 
                 <button class="btn btn-gradient-primary"><span style="font-size: 20px;">+</span>&nbsp; <span style="font-size: 20px;">Add New</span></button>
 
                     </span>
 
-                  </ul></div>
+                  </ul>
+                  
+                  </div>
                   <div class="mt-2 border-top"><br>
                     <a href="products.html" target="main-panel" class="menu-title text-gray" style="font-size: 18px;text-decoration: none;font-weight: bold;color: black;">Products<i class="mdi mdi-chevron-double-right float-right"></i>
 
